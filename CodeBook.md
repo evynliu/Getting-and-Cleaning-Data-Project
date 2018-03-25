@@ -3,8 +3,8 @@ This is a code book that describes the variables, the data, and any transformati
 
 ## The Data Source
 The raw data for this project came from the UCI Machine Learning Repository. 
-.Original data: https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip
-.Full description of the dataset: http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones
+- Original data can be downloaded form [here](https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip).
+- Full description of the dataset is [here](http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones).
 
 
 ## Data Set Information
@@ -15,37 +15,30 @@ The sensor signals (accelerometer and gyroscope) were pre-processed by applying 
 ## Data Files
 The raw dataset included the following files:
 
-.'README.txt'
-
-.'features_info.txt': Shows information about the variables used on the feature vector.
-
-.'features.txt': List of all features.
-
-.'activity_labels.txt': Links the class labels with their activity name.
-
-.'train/X_train.txt': Training set.
-
-.'train/y_train.txt': Training labels.
-
-.'test/X_test.txt': Test set.
-
-.'test/y_test.txt': Test labels.
+- 'README.txt'
+- 'features_info.txt': Shows information about the variables used on the feature vector.
+- 'features.txt': List of all features.
+- 'activity_labels.txt': Links the class labels with their activity name.
+- 'train/X_train.txt': Training set.
+- 'train/y_train.txt': Training labels.
+- 'test/X_test.txt': Test set.
+- 'test/y_test.txt': Test labels.
 
 ## Transformation
-To get from the Raw Data to the Tidy Data the following transformations were made. These transformations can be executed with the script 'run_analysis.R'. Steps are:
+Below are transformations were made to get from the Raw Data to the Tidy Data. These transformations can be executed with the script `run_analysis.R`.
 
 1. Merged the training and test sets to create one data set.
 2. Extracted only the measurements on the mean and standard deviation for each measurement.
 3. Used descriptive activity names to name the activities in the data set.
 4. Appropriately labeled the data set with descriptive variable names.
-5. created a second, independent tidy data set with the average of each variable for each activity and each subject.
+5. Created a second, independent tidy data set with the average of each variable for each activity and each subject.
 
 ## Tidy Data
 The final dataset for this project consists of a file called `tidy_data.txt`
 
 ## Identifiers
-.subject - The ID of the test subject
-.activity - The type of activity performed when the corresponding measurements were taken
+- subject - The ID of the test subject
+- activity - The type of activity performed when the corresponding measurements were taken
 
 ## Measurements
 * tBodyAcc-mean()-X
