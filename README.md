@@ -9,4 +9,4 @@ This is the course project to create a R script called `run_analysis.R` that doe
 6. Create a new file called `tiny_data.txt` in the working directory
 
 ## Dependencies
-The script uses R libraries of `data.table` and `reshape2`, which need to be installed:
+The script uses R libraries of `data.table` and `reshape2`.
