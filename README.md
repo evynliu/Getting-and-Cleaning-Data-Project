@@ -1,7 +1,7 @@
 # Getting-and-Cleaning-Data-Project
 
 ## Course Project
-This is the course project to create a R script called run_analysis.R that does the following:
+This is the course project to create a R script called `run_analysis.R` that does the following:
 1. Download the dataset to a local working directory
 2. Load both the training and test datasets, and extract only the data on mean and standard deviation
 3. Load the activity and subject data for each dataset, and merges those columns with the dataset
