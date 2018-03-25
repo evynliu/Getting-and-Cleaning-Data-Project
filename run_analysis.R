@@ -22,15 +22,15 @@ extract_features <- grepl("mean|std", features)
 test <- read.table("./UCI HAR Dataset/test/X_test.txt")
 testActivities <- read.table("./UCI HAR Dataset/test/y_test.txt")
 testSubjects <- read.table("./UCI HAR Dataset/test/subject_test.txt")
-names(test) = features
+names(test) <- features
 
 # Extract only the data on mean and standard deviation
-test = test[,extract_features]
+test <- test[,extract_features]
 
 # Load activity labels
-testActivities[,2] = activity_labels[testActivities[,1]] 
-names(testActivities) = c("Activity_ID", "Activity_Label") 
-names(testSubjects) = "subject" 
+testActivities[,2] <- activity_labels[testActivities[,1]] 
+names(testActivities) <- c("Activity_ID", "Activity_Label") 
+names(testSubjects) <- "subject" 
 
 # Bind test data
 test_data <- cbind(as.data.table(testSubjects), testActivities, test)
@@ -39,15 +39,15 @@ test_data <- cbind(as.data.table(testSubjects), testActivities, test)
 train <- read.table("./UCI HAR Dataset/train/X_train.txt") 
 trainActivities <- read.table("./UCI HAR Dataset/train/y_train.txt") 
 trainSubjects <- read.table("./UCI HAR Dataset/train/subject_train.txt") 
-names(train) = features 
+names(train) <- features 
 
 # Extract only the data on mean and standard deviation
-train = train[,extract_features]
+train <- train[,extract_features]
 
 # Load activity labels
-trainActivities[,2] = activity_labels[trainActivities[,1]] 
-names(trainActivities) = c("Activity_ID", "Activity_Label") 
-names(trainSubjects) = "subject" 
+trainActivities[,2] <- activity_labels[trainActivities[,1]] 
+names(trainActivities) <- c("Activity_ID", "Activity_Label") 
+names(trainSubjects) <- "subject" 
 
 # Bind train data
 train_data <- cbind(as.data.table(trainSubjects), trainActivities , train)
@@ -60,4 +60,4 @@ melt_data <- melt(combined, id = ids, measure.vars = data_labels)
 
 #Creat tidy dataset and write the result on a file
 tidy_data <- dcast(melt_data, subject + Activity_Label ~ variable, mean)
-write.table(tidy_data, file = "./tidy_data.txt")
+write.table(tidy_data, file = "./tidy_data.txt", row.names = FALSE)
